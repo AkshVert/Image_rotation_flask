@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Rotation</title>
+</head>
+<body>
+    <h1>Image Rotation</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <label for="angle">Select rotation angle:</label>
+        <select name="angle" id="angle">
+            <option value="left">Rotate Left</option>
+            <option value="right">Rotate Right</option>
+            <option value="horizontal">Flip Horizontal</option>
+            <option value="vertical">Flip Vertical</option>
+            <option value="45">Rotate 45 Degrees</option>
+        </select><br><br>
+        <input type="submit" value="Rotate">
+    </form>
+</body>
+</html>
+
